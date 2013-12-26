@@ -1,2 +1,11 @@
+Don't highlight the first choice if we are running in non-interactive mode
+Allow choice tree (what to order, etc)
+Dynamically adjust weight of each choice
+
 ARGV
-    指定输出行数
+    -e --exclude        ignore choice(s)
+    -p --priority       change priority of an existing choice
+    -a --add            additional choice(s)
+    -d --allow-duplicates --no-duplicates
+    -f --file           use FILE as choice list (FILE could be -)
+    -h --head N         output only the first N lines

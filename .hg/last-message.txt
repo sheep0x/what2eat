@@ -1,1 +1,1 @@
-ignore .git
+add readme and license notice; remove TODO list

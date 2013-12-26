@@ -1,16 +1,21 @@
 #! /usr/bin/env bash
 
+# Copyright 2013 Chen Ruichao <linuxer.sheep.0x@gmail.com>
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 # Notes
 #   If you write '   3   Foo   bar    ', the weight will be 3 and the name 'Foo   bar'
-
-# TODO
-#   don't highlight the first choice if we are running in non-interactive mode
-#   allow choice tree (食堂2楼、食堂1楼)
-#   -e --exclude        ignore choice(s)
-#   -p --priority       change priority of an existing choice
-#   -a --add            additional choice(s)
-#   -d --allow-duplicates --no-duplicates
-#   -f --file           use FILE as choice list (FILE could be -)
 
 declare -i total_weight=0
 declare -a map
