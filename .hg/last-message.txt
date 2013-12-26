@@ -1,1 +1,1 @@
-reformatted README.md
+fixed some typos

@@ -36,7 +36,7 @@ Why the repo contains Mercurial files?
 --------------------------------------
 Sadly, the mercurial-git package (Wheezy) doesn't work so well for me, so I have to put up with different SCMs.
 
-This repo is actually a Mercurial repo, and Git is only used as a tool to upload/download files from/to Github. That's why the Github repo also includes the .hg directory and the .hgignore file.
+This repo is actually a Mercurial repo, and Git is only used as a tool to upload/download files to/from Github. That's why the Github repo also includes the .hg directory and the .hgignore file.
 
 Since the Git repo doesn't keep track of the actual commits, it is not supposed to be used as a collaborative tool. However, this script is so simple that patches works just fine.
 
