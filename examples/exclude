@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+# doesn't work as expected
+./rand_tmp | sed 's/西北拉面/\r/'
+
+# good
+./rand_tmp | grep -v 西北

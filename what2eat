@@ -1,0 +1,52 @@
+#! /usr/bin/env bash
+
+# Notes
+#   If you write '   3   Foo   bar    ', the weight will be 3 and the name 'Foo   bar'
+
+# TODO
+#   don't highlight the first choice if we are running in non-interactive mode
+#   allow choice tree (食堂2楼、食堂1楼)
+#   -e --exclude        ignore choice(s)
+#   -p --priority       change priority of an existing choice
+#   -a --add            additional choice(s)
+#   -d --allow-duplicates --no-duplicates
+#   -f --file           use FILE as choice list (FILE could be -)
+
+declare -i total_weight=0
+declare -a map
+declare -A used
+
+function init() {
+    local weight name
+    while read weight name; do
+        for (( ; weight > 0; weight-- ))
+          do map[total_weight++]=$name; done
+        used[$name]=false
+    done
+}
+
+init << EOF
+6 食堂
+6 西北拉面
+2 悟饕
+2 信华肉包
+2 M.O.S
+2 全家福
+2 御面堂
+1 MacDonald's
+1 天天多多乐
+EOF
+
+declare -i used_cnt=0
+for i in $( shuf -i 0-$((total_weight - 1)) ); do
+    name=${map[i]}
+    if [[ ${used[$name]} == true ]]
+      then continue
+      else used[$name]=true
+    fi
+    if (( used_cnt == 0 ))
+      then echo -e "\e[1m$name\e[0m"
+      else echo "$name"
+    fi
+    used_cnt=used_cnt+1
+done
