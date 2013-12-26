@@ -1,1 +1,1 @@
-add readme and license notice; remove TODO list
+reformatted README.md
