@@ -1,6 +1,10 @@
 what2eat
 ========
 
+The repo has moved
+------------------
+This repo has been moved to [Bitbucket](https://bitbucket.org/sheep0x/what2eat). The Github repo will no longer be updated. Please check the Bitbucket repo for latest updates.
+
 Usage
 -----
 ./what2eat
@@ -29,13 +33,3 @@ For an up-to-date TODO-list, see the todo file
 License
 -------
 This simple script is licensed under Apache License, Version 2.0.
-
-This repo is a mirror
----------------------
-Sadly, the mercurial-git package (Wheezy) doesn't work for me, so I have to put up with different SCMs.
-
-This repo is actually a Mercurial repo, and Git is only used as a tool to upload/download files to/from Github. That's why the commit history doesn't make sense.
-
-Since the Git repo doesn't keep track of the actual commits, it is not supposed to be used as a collaborative tool. However, this script is so simple that patches works just fine.
-
-If you know how to fix the mercurial-git bug or have any good suggestions about a better workaround, please tell me. And sorry again for the inconvenience.
